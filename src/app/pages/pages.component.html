@@ -1,0 +1,75 @@
+<!--modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="container-fluid">
+    <div class="modal-dialog modal-xl  modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">ADD PAGE CONTENTS</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="heading" class="col-form-label">HEADING</label>
+              <input type="text" class="form-control" id="heading">
+              <label for="sub-heading" class="col-form-label">SUB HEADING</label>
+              <input type="text" class="form-control" id="sub-heading">
+              <div class="input-group mb-2 mt-3">
+                <label class="input-group-text" for="inputGroupSelect01">PAGE SELECTION</label>
+                <select class="form-select" id="inputGroupSelect01">
+                  <option selected>Page selection</option>
+                  <option value="1">Home Page</option>
+                  <option value="2">Page Two</option>
+                  <option value="3">Page Three</option>
+                </select>
+              </div>
+              <label for="inputGroupFile04" class="form-label">IMAGE</label>
+              <div class="input-group mt-0">
+                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">UPLOAD</button>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Text</label>
+              <textarea [froalaEditor]="object" [froalaModel]="content" class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Publish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-sm-6">
+      <div class="card w-85">
+        <div class="card-body">
+          <h5 class="card-title">HOME PAGE</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda doloremque necessitatibus nulla reprehenderit tenetur ut.</p>
+          <button href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary m-1">Edit Page</button>
+          <button href="#" class="btn btn-danger m-1">Delete Page</button>
+          <button href="#" class="btn btn-info m-1">Add to OnBoarding</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-sm-6">
+      <div class="card w-85">
+        <div class="card-body">
+          <h5 class="card-title">SECOND PAGE</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda doloremque necessitatibus nulla reprehenderit tenetur ut.</p>
+          <button href="#" class="btn btn-primary m-1">Edit Page</button>
+          <button href="#" class="btn btn-danger m-1">Delete Page</button>
+          <button href="#" class="btn btn-info m-1">Add to OnBoarding</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

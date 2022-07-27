@@ -1,0 +1,106 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">OnBoarding</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">ADMIN</a>
+        </li>
+        <li class="nav-item">
+          <button type="button " class="btn btn-primary">OnBOARDING</button>
+        </li>
+      </ul>
+      <form class="d-flex">
+<!--        <button class="btn btn-info btn-light" type="submit">PUBLISH</button>-->
+<!--        <button class="btn btn-info  btn-light" type="submit">USE TEMPLATE</button>-->
+        <button class="btn btn-primary m-1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2">ADD PAGE</button>
+        <button class="btn btn-primary m-1 disabled" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">PAGE BUILDER</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div id="selection_box" class="selectorBox">
+  <iframe src="http://localhost:9000" style="height: 100%;width: 100%;" frameborder="0"></iframe>
+</div>
+
+<div id="onboard_box" class="selectorBox">
+  <iframe src="http://localhost:55602" style="height: 100%;width: 100%;" frameborder="0"></iframe>
+</div>
+
+<!--modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="container-fluid">
+  <div class="modal-dialog modal-xl  modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ADD PAGE CONTENTS</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+<!--          <div class="mb-3">-->
+<!--            <label for="heading" class="col-form-label">HEADING</label>-->
+<!--            <input type="text" class="form-control" id="heading">-->
+<!--            <label for="sub-heading" class="col-form-label">SUB HEADING</label>-->
+<!--            <input type="text" class="form-control" id="sub-heading">-->
+<!--            <div class="input-group mb-2 mt-3">-->
+<!--              <label class="input-group-text" for="inputGroupSelect01">PAGE SELECTION</label>-->
+<!--              <select class="form-select" id="inputGroupSelect01">-->
+<!--                <option selected>Page selection</option>-->
+<!--                <option value="1">Home Page</option>-->
+<!--                <option value="2">Page Two</option>-->
+<!--                <option value="3">Page Three</option>-->
+<!--              </select>-->
+<!--            </div>-->
+<!--            <label for="inputGroupFile04" class="form-label">IMAGE</label>-->
+<!--            <div class="input-group mt-0">-->
+<!--              <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">-->
+<!--              <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">UPLOAD</button>-->
+<!--            </div>-->
+<!--          </div>-->
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Text</label>
+            <textarea [froalaEditor]="object" [froalaModel]="content" class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Publish</button>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!--modal-->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="container-fluid">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">ADD PAGE NAME</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">PAGE NAME</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter page name">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Page description</label>
+            <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Enter page description">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">ADD</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
